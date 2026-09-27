@@ -1,0 +1,21 @@
+{
+  "name": "sistemaaviao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgbrouli/Aeroporto-Magnum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mgbrouli/Aeroporto-Magnum/issues"
+  },
+  "homepage": "https://github.com/mgbrouli/Aeroporto-Magnum#readme"
+}

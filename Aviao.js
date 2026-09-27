@@ -88,4 +88,13 @@ export class Aviao {
     }
     this.#tanque_combustivel_atual -= consumoPorHora;
   }
+
+  toString() {
+    return `=== Avião: ${this.#nome} ===
+Modelo: ${this.#modelo}
+Autonomia Total: ${this.#autonomia}L
+Tanque Atual: ${this.#tanque_combustivel_atual}L
+Quantidade de Assentos: ${this.#quantidade_assentos}
+Em Uso: ${this.#em_uso ? "Sim" : "Não"}`;
+  }
 }
