@@ -2,14 +2,17 @@ import { Inject, Injectable,  } from '@nestjs/common';
 import { CreateEmployeeDto } from './dto/create-employee.dto.js';
 import { UpdateEmployeeDto } from './dto/update-employee.dto.js';
 import { DATABASE_CONNECTION } from '../core/db/database.module.js';
+import type { AppDatabase } from '../core/db/database.module.js';
+import { employees } from './employees.schema.js';
 
 @Injectable()
 export class EmployeesService {
 
-  constructor(@Inject(DATABASE_CONNECTION) private readonly database: any) { }
+  constructor(@Inject(DATABASE_CONNECTION) private readonly database: AppDatabase) { }
 
   create(createEmployeeDto: CreateEmployeeDto) {
-    return 'This action adds a new employee';
+    const result = this.database.insert(employees).values(createEmployeeDto).returning();
+    return result;
   }
 
   findAll() {

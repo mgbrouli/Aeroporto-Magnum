@@ -3,7 +3,7 @@ import { db } from './index.js';
 
 
 export const DATABASE_CONNECTION = "DATABASE_CONNECTION";
-
+export type AppDatabase = typeof db;
 
 @Global()
 @Module({
