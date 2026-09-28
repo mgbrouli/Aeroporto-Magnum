@@ -1,0 +1,30 @@
+import { Inject, Injectable,  } from '@nestjs/common';
+import { CreateEmployeeDto } from './dto/create-employee.dto.js';
+import { UpdateEmployeeDto } from './dto/update-employee.dto.js';
+import { DATABASE_CONNECTION } from '../core/db/database.module.js';
+
+@Injectable()
+export class EmployeesService {
+
+  constructor(@Inject(DATABASE_CONNECTION) private readonly database: any) { }
+
+  create(createEmployeeDto: CreateEmployeeDto) {
+    return 'This action adds a new employee';
+  }
+
+  findAll() {
+    return `This action returns all employees`;
+  }
+
+  findOne(id: number) {
+    return `This action returns a #${id} employee`;
+  }
+
+  update(id: number, updateEmployeeDto: UpdateEmployeeDto) {
+    return `This action updates a #${id} employee`;
+  }
+
+  remove(id: number) {
+    return `This action removes a #${id} employee`;
+  }
+}

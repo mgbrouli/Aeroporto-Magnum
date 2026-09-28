@@ -24,54 +24,28 @@ export class Aviao {
   }
 
   // Getters e Setters para Nome
-  get nome() {
-    return this.#nome;
-  }
-
-  set nome(novoNome) {
-    this.#nome = novoNome;
-  }
+  get nome() {return this.#nome;}
+  set nome(novoNome) {this.#nome = novoNome;}
 
   // Getters e Setters para Modelo
-  get modelo() {
-    return this.#modelo;
-  }
-
-  set modelo(novoModelo) {
-    this.#modelo = novoModelo;
-  }
+  get modelo() {return this.#modelo;}
+  set modelo(novoModelo) {this.#modelo = novoModelo;}
 
   // Getters e Setters para Autonomia
-  get autonomia() {
-    return this.#autonomia;
-  }
-
-  set autonomia(novaAutonomia) {
-    this.#autonomia = novaAutonomia;
-  }
+  get autonomia() {return this.#autonomia;}
+  set autonomia(novaAutonomia) {this.#autonomia = novaAutonomia;}
 
   // Getter para Tanque Atual (sem setter direto para forçar o uso de addCombustivel)
-  get tanqueCombustivelAtual() {
-    return this.#tanque_combustivel_atual;
-  }
+  get tanqueCombustivelAtual() {return this.#tanque_combustivel_atual;}
 
   // Getters e Setters para Em Uso
-  get emUso() {
-    return this.#em_uso;
-  }
-
-  set emUso(status) {
-    this.#em_uso = status;
-  }
+  get emUso() {return this.#em_uso;}
+  set emUso(status) {this.#em_uso = status;}
 
   // Getters e Setters para Assentos
-  get quantidadeAssentos() {
-    return this.#quantidade_assentos;
-  }
+  get quantidadeAssentos() {return this.#quantidade_assentos;}
 
-  set quantidadeAssentos(quantidade) {
-    this.#quantidade_assentos = quantidade;
-  }
+  set quantidadeAssentos(quantidade) {this.#quantidade_assentos = quantidade;}
 
   // Métodos com regras de negócio
   addCombustivel(quantidade) {
